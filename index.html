@@ -4,167 +4,82 @@
   <meta charset="UTF-8">
   <title>Lukas Eduardo – Desenvolvedor</title>
   <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="brand">
-        <div class="brand-title">Lukas Eduardo</div>
-        <div class="brand-subtitle">Canalizador industrial | Aspirante a Dev Web</div>
+  <header class="top-nav">
+    <div class="brand">
+      <div class="brand-title">Lukas Eduardo</div>
+      <div class="brand-subtitle">Canalizador industrial | Aspirante a Dev Web</div>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" data-page="home">Início</a>
+      <a href="projetos.html" data-page="projetos">Projetos</a>
+      <a href="contato.html" data-page="contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="page">
+    <!-- Hero / Apresentação -->
+    <section class="hero">
+      <div class="hero-main">
+        <div class="hero-tag">
+          <span class="hero-tag-dot"></span>
+          Aberto a oportunidades como desenvolvedor júnior
+        </div>
+        <h1 class="hero-title">
+          Construindo soluções digitais, partindo da experiência industrial para o mundo da tecnologia.
+        </h1>
+        <p class="hero-text">
+          Brasileiro, 33 anos, vivendo em Lavradio – Portugal. Trabalho como canalizador industrial e estou em transição
+          para desenvolvimento web, começando por front-end e back-end com apoio de IA. Busco oportunidades para aprender
+          na prática, colaborar em projetos reais e crescer como desenvolvedor.
+        </p>
+        <div class="hero-actions">
+          <a href="projetos.html" class="btn btn-primary">Ver meus projetos</a>
+          <a href="contato.html" class="btn btn-ghost">Falar comigo</a>
+        </div>
       </div>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </header>
 
-    <main>
-      <!-- Hero / Apresentação -->
-      <section class="hero">
-        <div class="hero-main">
-          <div class="hero-tag">
-            <span class="hero-tag-dot"></span>
-            Aberto a oportunidades como desenvolvedor júnior
-          </div>
-          <h1 class="hero-title">
-            Construindo soluções digitais, partindo da experiência industrial para o mundo da tecnologia.
-          </h1>
-          <p class="hero-text">
-            Brasileiro, 33 anos, vivendo em Lavradio – Portugal. Trabalho como canalizador industrial e estou em transição
-            para desenvolvimento web, começando por front-end e back-end com apoio de IA. Busco oportunidades para aprender
-            na prática, colaborar em projetos reais e crescer como desenvolvedor.
-          </p>
-          <div class="hero-actions">
-            <a href="#projetos" class="btn btn-primary">
-              Ver meus projetos
-            </a>
-            <a href="#contato" class="btn btn-ghost">
-              Falar comigo
-            </a>
-          </div>
-        </div>
-
-        <aside class="hero-secondary">
-          <p class="hero-bio">
-            Focado em criar interfaces simples, objetivas e fáceis de entender, com código limpo e boa organização.
-          </p>
-          <div class="hero-list">
-            <div class="hero-pill">Base em HTML, CSS e JavaScript</div>
-            <div class="hero-pill">Aprendendo front-end e back-end</div>
-            <div class="hero-pill">Experiência industrial e trabalho em equipe</div>
-            <div class="hero-pill">Aberto a estágios e vagas júnior</div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- Sobre mim -->
-      <section id="sobre" class="section">
-        <div class="section-header">
-          <h2 class="section-title">Sobre mim</h2>
-          <span class="section-subtitle">Quem eu sou e o que busco</span>
-        </div>
-        <p style="font-size: 0.95rem; color: #d1d5db; margin-bottom: 6px;">
-          Meu nome é Lukas Eduardo de Oliveira, tenho 33 anos, sou brasileiro e moro em Portugal desde os 24 anos.
-          Atuo como canalizador industrial em uma empresa portuguesa, acostumado com rotinas exigentes, segurança e trabalho
-          em equipe.
+      <aside class="hero-secondary">
+        <p class="hero-bio">
+          Focado em criar interfaces simples, objetivas e fáceis de entender, com código limpo e boa organização.
         </p>
-        <p style="font-size: 0.95rem; color: #d1d5db; margin-bottom: 6px;">
-          Estou em transição de carreira para desenvolvimento web, estudando front-end e back-end com apoio de inteligência
-          artificial para acelerar meu aprendizado. Meu objetivo é atuar como desenvolvedor júnior, começar a participar
-          de projetos reais e evoluir constantemente.
-        </p>
-        <p style="font-size: 0.95rem; color: #9ca3af;">
-          Tenho perfil prático, gosto de aprender fazendo, resolvendo problemas concretos e entregando valor de forma simples
-          e direta, tanto no código quanto na comunicação.
-        </p>
-      </section>
-
-      <!-- Projetos -->
-      <section id="projetos" class="section">
-        <div class="section-header">
-          <h2 class="section-title">Projetos</h2>
-          <span class="section-subtitle">Seleção de projetos em desenvolvimento</span>
+        <div class="hero-list">
+          <div class="hero-pill">Base em HTML, CSS e JavaScript</div>
+          <div class="hero-pill">Aprendendo front-end e back-end</div>
+          <div class="hero-pill">Experiência industrial e trabalho em equipe</div>
+          <div class="hero-pill">Aberto a estágios e vagas júnior</div>
         </div>
+      </aside>
+    </section>
 
-        <div class="projects-grid">
-          <!-- Projeto 1 -->
-          <article class="project-card">
-            <div class="project-name">Portfólio pessoal</div>
-            <div class="project-meta">
-              Página minimalista para apresentar biografia, projetos e contatos, focada em recrutadores.
-            </div>
-            <div class="project-tags">
-              <span class="tag">HTML</span>
-              <span class="tag">CSS</span>
-              <span class="tag">Responsivo</span>
-            </div>
-          </article>
+    <!-- Sobre mim -->
+    <section id="sobre" class="section">
+      <div class="section-header">
+        <h2 class="section-title">Sobre mim</h2>
+        <span class="section-subtitle">Quem eu sou e o que busco</span>
+      </div>
+      <p style="font-size: 0.95rem; color: #d1d5db; margin-bottom: 6px;">
+        Meu nome é Lukas Eduardo de Oliveira, tenho 33 anos, sou brasileiro e moro em Portugal desde os 24 anos.
+        Atuo como canalizador industrial em uma empresa portuguesa, acostumado com rotinas exigentes, segurança e trabalho
+        em equipe.
+      </p>
+      <p style="font-size: 0.95rem; color: #d1d5db; margin-bottom: 6px;">
+        Estou em transição de carreira para desenvolvimento web, estudando front-end e back-end com apoio de inteligência
+        artificial para acelerar meu aprendizado. Meu objetivo é atuar como desenvolvedor júnior, começar a participar
+        de projetos reais e evoluir constantemente.
+      </p>
+      <p style="font-size: 0.95rem; color: #9ca3af;">
+        Tenho perfil prático, gosto de aprender fazendo, resolvendo problemas concretos e entregando valor de forma simples
+        e direta, tanto no código quanto na comunicação.
+      </p>
+    </section>
+  </main>
 
-          <!-- Projeto 2 (exemplo futuro) -->
-          <article class="project-card">
-            <div class="project-name">Em breve: Aplicação simples de tarefas</div>
-            <div class="project-meta">
-              Projeto para praticar JavaScript, lógica de programação e manipulação do DOM com uma lista de tarefas dinâmica.
-            </div>
-            <div class="project-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">DOM</span>
-              <span class="tag">Lógica</span>
-            </div>
-          </article>
+  <footer>
+    © <span id="year"></span> Lukas Eduardo – Portfólio em construção.
+  </footer>
 
-          <!-- Projeto 3 (exemplo futuro) -->
-          <article class="project-card">
-            <div class="project-name">Em breve: API básica com Node.js</div>
-            <div class="project-meta">
-              Primeira experiência com back-end, criando uma API simples para registrar e listar dados.
-            </div>
-            <div class="project-tags">
-              <span class="tag">Node.js</span>
-              <span class="tag">API</span>
-              <span class="tag">Back-end</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Contato -->
-      <section id="contato" class="section">
-        <div class="section-header">
-          <h2 class="section-title">Contato</h2>
-          <span class="section-subtitle">Como me encontrar</span>
-        </div>
-        <ul class="contact-list">
-          <li class="contact-item">
-            <span>E-mail</span><br>
-            <a href="mailto:eduardolukas@icloud.com">eduardolukas@icloud.com</a>
-          </li>
-          <li class="contact-item">
-            <span>LinkedIn</span><br>
-            <a href="http://linkedin.com/in/eduardolukas" target="_blank" rel="noopener noreferrer">
-              linkedin.com/in/eduardolukas
-            </a>
-          </li>
-          <li class="contact-item">
-            <span>GitHub</span><br>
-            <a href="https://github.com/eduardolukas" target="_blank" rel="noopener noreferrer">
-              github.com/eduardolukas
-            </a>
-          </li>
-        </ul>
-      </section>
-    </main>
-
-    <footer>
-      © <span id="year"></span> Lukas Eduardo – Portfólio em construção.
-    </footer>
-  </div>
-
-  <script>
-    // Atualiza ano no rodapé automaticamente
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
