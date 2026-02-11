@@ -1,14 +1,14 @@
-/* LAYOUT LUXO ROXO - ELEGÂNCIA PROFISSIONAL */
+/* LAYOUT LUXO ROXO ESCURO - ELEGANÇA PROFISSIONAL */
 :root {
   --roxo-tiro: #4F0341;
+  --roxo-escuro-fundo: #2A0F27;  /* NOVO: fundo roxo escuro */
   --azul-aco: #B2B5E0;
   --branco-puro: #FFFFFF;
   --creme-fundo: #F2F0EA;
   --prata-borda: #C0C0C0;
-  --roxo-escuro: #3A022F;
   --roxo-claro: #7A0564;
-  --sombra-roxo: rgba(79, 3, 65, 0.25);
-  --sombra-azul: rgba(178, 181, 224, 0.2);
+  --sombra-roxo: rgba(79, 3, 65, 0.35);
+  --sombra-azul: rgba(178, 181, 224, 0.25);
   --font-main: system-ui, -apple-system, 'Segoe UI', sans-serif;
 }
 
@@ -28,12 +28,12 @@ body {
   font-family: var(--font-main);
   font-size: clamp(1rem, 2.8vw, 1.1rem);
   line-height: 1.65;
-  color: var(--roxo-tiro);
-  background: var(--creme-fundo);
+  color: var(--branco-puro);     /* texto branco no fundo escuro */
+  background: linear-gradient(135deg, var(--roxo-escuro-fundo), #1A0819);  /* FUNDO ROXO ESCURO */
   min-height: 100vh;
 }
 
-/* MENU FIXO ROXO ESCURO */
+/* MENU FIXO ROXO LUXO */
 .top-nav {
   position: fixed;
   top: 0;
@@ -44,24 +44,24 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 32px;
-  background: linear-gradient(135deg, var(--roxo-escuro), var(--roxo-tiro));
+  background: linear-gradient(135deg, rgba(79, 3, 65, 0.95), rgba(42, 15, 39, 0.95));
   border-bottom: 1px solid var(--prata-borda);
   z-index: 1000;
-  backdrop-filter: blur(20px);
-  box-shadow: 0 4px 24px var(--sombra-roxo);
+  backdrop-filter: blur(25px);
+  box-shadow: 0 8px 32px var(--sombra-roxo);
 }
 
 .brand-title {
   font-weight: 800;
   font-size: 1.25rem;
   color: var(--branco-puro);
-  text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  text-shadow: 0 2px 12px rgba(0,0,0,0.5);
 }
 
 .brand-subtitle {
   font-size: 0.85rem;
   color: var(--azul-aco);
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .nav-links {
@@ -71,52 +71,54 @@ body {
 
 .nav-links a {
   margin-left: 20px;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border-radius: 25px;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--branco-puro);
   text-decoration: none;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255,255,255,0.2);
-  transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
 }
 
 .nav-links a:hover,
 .nav-links a.active {
   background: linear-gradient(135deg, var(--azul-aco), #A8AABB);
   color: var(--roxo-tiro);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px var(--sombra-azul);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px var(--sombra-azul);
 }
 
 /* Container com espaçamento topo */
 .page {
   max-width: 1100px;
-  margin: 120px auto 48px;
-  padding: 0 24px 80px;
+  margin: 130px auto 56px;  /* Mais espaço pro fundo escuro brilhar */
+  padding: 0 24px 100px;
 }
 
-/* Glass cards LUXO ROXO */
+/* Cards ROXOS LUXUOSOS no fundo escuro */
 .glass-card,
 .hero-main,
 .hero-secondary,
 .section,
 .project-card,
 .contact-item {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--prata-borda);
-  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border: 1px solid rgba(192, 192, 192, 0.3);
+  border-radius: 28px;
   box-shadow: 
-    0 12px 40px var(--sombra-roxo),
-    0 4px 12px rgba(0,0,0,0.08);
-  padding: 48px 40px;
-  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+    0 20px 60px rgba(0,0,0,0.4),
+    0 8px 24px rgba(79, 3, 65, 0.2);
+  padding: 56px 48px;
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
   position: relative;
   overflow: hidden;
+  color: var(--branco-puro);
 }
 
 .glass-card::before,
@@ -127,45 +129,168 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--roxo-tiro), var(--roxo-claro));
+  height: 6px;
+  background: linear-gradient(90deg, var(--roxo-tiro), var(--roxo-claro), var(--azul-aco));
+  border-radius: 28px 28px 0 0;
+  box-shadow: 0 2px 12px var(--sombra-roxo);
 }
 
 .glass-card:hover,
 .project-card:hover,
 .contact-item:hover {
-  transform: translateY(-6px);
+  transform: translateY(-8px) scale(1.02);
   box-shadow: 
-    0 24px 64px var(--sombra-roxo),
-    0 8px 24px rgba(0,0,0,0.15);
+    0 32px 80px rgba(0,0,0,0.5),
+    0 12px 36px var(--sombra-roxo);
+  border-color: rgba(192, 192, 192, 0.5);
 }
 
 /* Hero em COLUNA ÚNICA */
 .hero {
-  margin-bottom: 80px;
+  margin-bottom: 96px;
 }
 
 .hero-main {
-  padding: 56px 48px;
+  padding: 64px 56px;
 }
 
 .hero-tag {
   display: inline-flex;
   align-items: center;
-  gap: 16px;
-  padding: 24px 36px;
+  gap: 20px;
+  padding: 28px 40px;
   background: linear-gradient(135deg, var(--roxo-tiro), var(--roxo-claro));
   color: var(--branco-puro) !important;
-  font-size: clamp(1.1rem, 2.8vw, 1.25rem);
-  font-weight: 800;
-  border-radius: 50px;
-  box-shadow: 0 12px 40px var(--sombra-roxo);
-  margin-bottom: 36px;
+  font-size: clamp(1.15rem, 3vw, 1.3rem);
+  font-weight: 900;
+  border-radius: 60px;
+  box-shadow: 0 16px 48px var(--sombra-roxo);
+  margin-bottom: 40px;
   position: relative;
   overflow: hidden;
 }
 
 .hero-tag::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 120%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: left 0.8s;
+}
+
+.hero-tag:hover::after {
+  left: 120%;
+}
+
+.hero-tag-dot {
+  width: 24px;
+  height: 24px;
+  background: var(--branco-puro);
+  border-radius: 50%;
+  box-shadow: 0 0 32px rgba(255,255,255,1);
+  animation: pulse-roxo 2s infinite;
+}
+
+@keyframes pulse-roxo {
+  0%, 100% { 
+    opacity: 1; 
+    transform: scale(1);
+    box-shadow: 0 0 32px rgba(255,255,255,1);
+  }
+  50% { 
+    opacity: 0.8; 
+    transform: scale(1.2);
+    box-shadow: 0 0 48px rgba(255,255,255,1.2);
+  }
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  font-weight: 950;
+  line-height: 1.05;
+  margin-bottom: 32px;
+  color: var(--branco-puro) !important;
+  background: linear-gradient(135deg, var(--branco-puro), var(--azul-aco));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+.hero-text {
+  color: rgba(255,255,255,0.95);
+  margin-bottom: 48px;
+  font-size: 1.25rem;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-bottom: 56px;
+}
+
+/* Hero secondary */
+.hero-secondary {
+  padding: 48px;
+  margin-top: 48px;
+  border: 2px solid var(--azul-aco);
+  background: rgba(178, 181, 224, 0.15) !important;
+}
+
+.hero-bio {
+  color: var(--branco-puro);
+  margin-bottom: 32px;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.hero-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.hero-pill {
+  padding: 16px 28px;
+  background: linear-gradient(135deg, var(--azul-aco), rgba(178, 181, 224, 0.8));
+  border: 1px solid var(--prata-borda);
+  border-radius: 36px;
+  color: var(--roxo-tiro) !important;
+  font-weight: 800;
+  box-shadow: 0 8px 24px var(--sombra-azul);
+  transition: all 0.3s ease;
+}
+
+.hero-pill:hover {
+  transform: translateX(8px);
+  box-shadow: 0 12px 32px var(--sombra-azul);
+}
+
+/* Botões ULTRA LUXO */
+.btn {
+  font-size: 1.15rem;
+  font-weight: 900;
+  padding: 20px 44px;
+  border-radius: 60px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 16px 48px var(--sombra-roxo);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -176,89 +301,28 @@ body {
   transition: left 0.6s;
 }
 
-.hero-tag:hover::after {
+.btn:hover::before {
   left: 100%;
 }
 
-.hero-tag-dot {
-  width: 20px;
-  height: 20px;
-  background: var(--branco-puro);
-  border-radius: 50%;
-  box-shadow: 0 0 24px rgba(255,255,255,0.8);
-  animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; transform: scale(1.1); }
-}
-
-.hero-title {
-  font-size: clamp(2.75rem, 7vw, 4rem);
-  font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 28px;
-  color: var(--roxo-tiro) !important;
+.btn-primary {
   background: linear-gradient(135deg, var(--roxo-tiro), var(--roxo-claro));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--branco-puro) !important;
 }
 
-.hero-text {
-  color: var(--roxo-tiro);
-  margin-bottom: 44px;
-  font-size: 1.15rem;
-  line-height: 1.75;
-  opacity: 0.9;
+.btn-primary:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 32px 72px var(--sombra-roxo);
 }
 
-.hero-actions {
-  display: flex;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-bottom: 48px;
+.btn-ghost {
+  background: rgba(255,255,255,0.15);
+  color: var(--branco-puro) !important;
+  border: 2px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(20px);
 }
 
-/* Hero secondary ABAIXO */
-.hero-secondary {
-  padding: 40px;
-  margin-top: 40px;
-  border: 2px solid var(--azul-aco);
-}
-
-.hero-bio {
-  color: var(--roxo-tiro);
-  margin-bottom: 28px;
-  font-size: 1.1rem;
-  font-weight: 500;
-}
-
-.hero-list {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.hero-pill {
-  padding: 14px 24px;
-  background: linear-gradient(135deg, var(--azul-aco), #C0C3E8);
-  border: 1px solid var(--prata-borda);
-  border-radius: 32px;
-  color: var(--roxo-tiro) !important;
-  font-weight: 700;
-  box-shadow: 0 4px 16px var(--sombra-azul);
-}
-
-/* Botões LUXO */
-.btn {
-  font-size: 1.1rem;
-  font-weight: 800;
-  padding: 18px 36px;
-  border-radius: 50px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
-  box-shadow: 0 12px 32px var(--sombra-roxo);
-  
+.btn-ghost:hover {
+  background: linear-gradient(135deg, var(--roxo-tiro), var(--roxo-claro));
+  color: var(--branco-puro) !important;
+  bo
