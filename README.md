@@ -37,7 +37,7 @@ Este repositório foi criado para:
 
 ## Como acessar meu portfólio
 
-Assim que o GitHub Pages estiver configurado, meu portfólio poderá ser acessado pelo link:
+Meu portfólio poderá ser acessado pelo link:
 
 ```text
 https://eduardolukas.github.io/Portifolio-/
