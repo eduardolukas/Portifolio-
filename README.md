@@ -40,4 +40,4 @@ Este repositório foi criado para:
 Assim que o GitHub Pages estiver configurado, meu portfólio poderá ser acessado pelo link:
 
 ```text
-https://eduardolukas.github.io/projetos/
+https://eduardolukas.github.io/projetos-/
