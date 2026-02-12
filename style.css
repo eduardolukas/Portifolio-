@@ -324,6 +324,146 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
+/* Grid de Projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: var(--spacing-lg);
+  margin: var(--spacing-xl) 0;
+}
+
+.project-card {
+  background: var(--bg-primary);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  animation: slideInUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.project-card:nth-child(2) { animation-delay: 0.1s; }
+.project-card:nth-child(3) { animation-delay: 0.2s; }
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.project-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.project-meta {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: var(--spacing-md);
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.tag {
+  background: rgba(79, 195, 247, 0.2);
+  color: var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid rgba(79, 195, 247, 0.3);
+  transition: var(--transition);
+}
+
+.tag:hover {
+  background: var(--accent);
+  color: #0a0a1a;
+}
+
+/* Lista de Contato */
+.contact-list {
+  list-style: none;
+  max-width: 600px;
+  margin: var(--spacing-xl) auto 0;
+  padding: 0;
+}
+
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  padding: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  transition: var(--transition);
+  animation: slideInUp 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.contact-item:nth-child(2) { animation-delay: 0.1s; }
+.contact-item:nth-child(3) { animation-delay: 0.2s; }
+
+.contact-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent);
+}
+
+.contact-item span {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.9rem;
+}
+
+.contact-item a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 1rem;
+  word-break: break-all;
+  transition: var(--transition);
+}
+
+.contact-item a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+/* Centralizar botões de voltar */
+.section .btn {
+  display: block;
+  max-width: 250px;
+  margin: var(--spacing-xl) auto 0;
+  text-align: center;
+}
+
+/* Melhorias gerais para todas as páginas */
+.page section {
+  animation-delay: 0.2s;
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+  
+  .contact-list {
+    margin-top: var(--spacing-lg);
+  }
+}
+
 }
 
 /* Animações de scroll suave para seções (ativa via JS se necessário) */
